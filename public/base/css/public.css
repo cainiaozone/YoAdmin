@@ -4,12 +4,12 @@ body {
   padding-top: 50px;
 }
 
-a,
-a:hover,
-a:link {
+a, a:hover, a:link {
   text-decoration: none;
 }
+
 /*水平翻转*/
+
 .flipx {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -18,7 +18,9 @@ a:link {
   /*IE*/
   filter: FlipH;
 }
+
 /*垂直翻转*/
+
 .flipy {
   -moz-transform: scaleY(-1);
   -webkit-transform: scaleY(-1);
@@ -92,12 +94,11 @@ header .logo {
   height: 40px;
 }
 
-header .navbar-inverse .navbar-nav > li > a {
+header .navbar-inverse .navbar-nav>li>a {
   color: #fff;
 }
 
-header .navbar-nav li:hover,
-header .navbar-section:hover {
+header .navbar-nav li:hover, header .navbar-section:hover {
   background: #62A8D1;
 }
 
@@ -118,6 +119,7 @@ header .navbar-fixed-top {
 }
 
 header .navbar-section {
+  float: left;
   display: inline-block;
   width: 120px;
   height: 50px;
@@ -135,9 +137,7 @@ header .navbar-section.active {
   color: #333;
 }
 
-.navbar-inverse .navbar-toggle:focus,
-.navbar-inverse .navbar-toggle:hover,
-header .navbar-inverse .navbar-toggle {
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover, header .navbar-inverse .navbar-toggle {
   border: none;
   background-color: #75B3D7;
 }
@@ -145,8 +145,11 @@ header .navbar-inverse .navbar-toggle {
 .navbar-toggle {
   margin-right: 30px;
 }
+
 /* header end */
+
 /* main start */
+
 main .sidebar {
   width: 190px;
   color: #585858;
@@ -180,9 +183,7 @@ main .nav-sidebar li a {
   background-color: #F8F8F8;
 }
 
-main .nav-sidebar .active a,
-main .nav-sidebar li a:focus,
-main .nav-sidebar li a:hover {
+main .nav-sidebar .active a, main .nav-sidebar li a:focus, main .nav-sidebar li a:hover {
   color: #2B7DBC;
   background-color: #fff;
 }
@@ -208,18 +209,18 @@ main .sidebar .sidebar-status {
 main .sidebar .sidebar-status:hover {
   color: #fff;
 }
+
 /* main end */
+
 @media (min-width: 768px) {
   header .navbar-nav li {
     border-left: 1px solid #eee;
   }
-
   main .main {
     margin-left: 191px;
     padding-right: 40px;
     padding-left: 40px;
   }
-
   main .sidebar {
     position: fixed;
     top: 50px;
@@ -233,21 +234,20 @@ main .sidebar .sidebar-status:hover {
     border-right: 1px solid #eee;
   }
 }
+
 @media (max-width:767px) {
   main .sidebar {
     width: 100%;
   }
-
   main .nav-sidebar li a {
     padding-left: 35px;
   }
-
   main .sidebar-status {
     display: none;
   }
-
   main .nav-sidebar {
     margin-right: -20px;
   }
 }
+
 /* Public CSS End */
