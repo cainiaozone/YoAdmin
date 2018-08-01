@@ -1,0 +1,52 @@
+{% extends "../common/layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="/home/css/home.css">
+  <link rel="stylesheet" href="/home/css/home_response.css">
+{% endblock %}
+{% block sidebar %}
+  <ul class="nav nav-sidebar">
+    <li>
+      <a href="#">
+        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+        <span>组织</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+        <span>License</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+        <span>用户</span>
+      </a>
+    </li>
+    <li class="active">
+      <a href="#">
+        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+        <span>用户组</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+        <span>用户角色</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+        <span>日志</span>
+      </a>
+    </li>
+  </ul>
+{% endblock %}
+{% block main %}
+  <h1 class="page-header">用户组</h1>
+
+{% endblock %}
+{% block js %}
+  <script type="text/javascript" src="/home/js/home.js"></script>
+{% endblock %}

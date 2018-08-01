@@ -1,0 +1,253 @@
+/* Public CSS Start */
+
+body {
+  padding-top: 50px;
+}
+
+a,
+a:hover,
+a:link {
+  text-decoration: none;
+}
+/*水平翻转*/
+.flipx {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  /*IE*/
+  filter: FlipH;
+}
+/*垂直翻转*/
+.flipy {
+  -moz-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  transform: scaleY(-1);
+  /*IE*/
+  filter: FlipV;
+}
+
+header .navbar {
+  background-color: #438EB9;
+}
+
+header .service-lists {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px 40px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+header .service-lists .lists-title {
+  margin-bottom: 20px;
+}
+
+header .service-lists ul {
+  overflow: hidden;
+  padding: 0;
+}
+
+header .service-lists ul li {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 230px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 230px;
+  list-style: none;
+  background-color: #ddd;
+  border-radius: 6px;
+}
+
+header .service-lists ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+header .service-lists ul li a:hover {
+  background-color: #5BBFDD;
+  color: #fff;
+}
+
+header .navbar-brand {
+  position: relative;
+  padding: 0 10px;
+  height: 50px;
+  width: 190px;
+}
+
+header .logo {
+  float: left;
+  margin: 5px;
+  height: 40px;
+}
+
+header .navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+
+header .navbar-nav li:hover,
+header .navbar-section:hover {
+  background: #62A8D1;
+}
+
+header .navbar-nav .badge {
+  position: relative;
+  top: -2px;
+  background-color: #A0A0A0;
+}
+
+header .navbar-brand sub {
+  position: relative;
+  top: 20px;
+  color: #fff;
+}
+
+header .navbar-fixed-top {
+  border: 0;
+}
+
+header .navbar-section {
+  display: inline-block;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+header .navbar-section.active {
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover,
+header .navbar-inverse .navbar-toggle {
+  border: none;
+  background-color: #75B3D7;
+}
+
+.navbar-toggle {
+  margin-right: 30px;
+}
+/* header end */
+/* main start */
+main .sidebar {
+  width: 190px;
+  color: #585858;
+  background-color: #F8F8F8;
+}
+
+main .menu-icon {
+  display: inline-block;
+  min-width: 30px;
+  margin-right: 2px;
+  vertical-align: sub;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+main .nav-sidebar {
+  margin-right: -21px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+
+main .nav-sidebar li {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+main .nav-sidebar li a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #585858;
+  background-color: #F8F8F8;
+}
+
+main .nav-sidebar .active a,
+main .nav-sidebar li a:focus,
+main .nav-sidebar li a:hover {
+  color: #2B7DBC;
+  background-color: #fff;
+}
+
+main .main {
+  padding: 20px;
+}
+
+main .main .page-header {
+  margin-top: 0;
+}
+
+main .sidebar .sidebar-status {
+  margin-left: -20px;
+  margin-right: -20px;
+  text-align: center;
+  color: #fff;
+  line-height: 30px;
+  background-color: #aaa;
+  cursor: pointer;
+}
+
+main .sidebar .sidebar-status:hover {
+  color: #fff;
+}
+/* main end */
+@media (min-width: 768px) {
+  header .navbar-nav li {
+    border-left: 1px solid #eee;
+  }
+
+  main .main {
+    margin-left: 191px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  main .sidebar {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 0 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #eee;
+  }
+}
+@media (max-width:767px) {
+  main .sidebar {
+    width: 100%;
+  }
+
+  main .nav-sidebar li a {
+    padding-left: 35px;
+  }
+
+  main .sidebar-status {
+    display: none;
+  }
+
+  main .nav-sidebar {
+    margin-right: -20px;
+  }
+}
+/* Public CSS End */
