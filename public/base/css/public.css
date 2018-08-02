@@ -30,6 +30,14 @@ a, a:hover, a:link {
   filter: FlipV;
 }
 
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
 header .navbar {
   background-color: #438EB9;
 }
@@ -189,25 +197,53 @@ main .nav-sidebar .active a, main .nav-sidebar li a:focus, main .nav-sidebar li 
 }
 
 main .main {
-  padding: 20px;
+  padding: 70px 20px 0;
 }
 
 main .main .page-header {
-  margin-top: 0;
+  position: fixed;
+  top: 0;
+  left: 211px;
+  right: 20px;
+  padding: 20px 8px 8px;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #fff;
 }
 
-main .sidebar .sidebar-status {
-  margin-left: -20px;
-  margin-right: -20px;
-  text-align: center;
-  color: #fff;
-  line-height: 30px;
-  background-color: #aaa;
+.main .page-header h1 {
+  float: left;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  font-weight: lighter;
+  color: #2679B5;
+}
+
+.main .page-header .operate {
+  float: right;
+}
+
+.main .page-header .operate p {
+  margin: 4px 0 0;
   cursor: pointer;
 }
 
-main .sidebar .sidebar-status:hover {
-  color: #fff;
+.main .page-content {
+  position: absolute;
+  top: 105px;
+  left: 211px;
+  right: 20px;
+  bottom: 0px;
+  overflow-y: auto;
+}
+
+.main .table thead {
+  background-color: #f2f2f2;
+}
+
+.main .table a:hover {
+  text-decoration: underline;
 }
 
 /* main end */
@@ -218,8 +254,6 @@ main .sidebar .sidebar-status:hover {
   }
   main .main {
     margin-left: 191px;
-    padding-right: 40px;
-    padding-left: 40px;
   }
   main .sidebar {
     position: fixed;

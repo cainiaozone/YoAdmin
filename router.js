@@ -7,6 +7,7 @@ module.exports = (app) => {
    * 模板文件
    */
   router.get('/', systemController.organization)
+    .get('/index', systemController.home)
     .get('/login', systemController.login)
     .get('/sys/organization', systemController.organization)
     .get('/sys/license', systemController.license)

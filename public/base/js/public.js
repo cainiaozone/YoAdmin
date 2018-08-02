@@ -1,5 +1,5 @@
 $(function() {
-  // 切换服务
+  // 切换服务版块
   $('header .navbar-section').click(function() {
     $(this).toggleClass('active')
     $(this).children('.glyphicon').toggleClass('glyphicon-menu-down').toggleClass('glyphicon-menu-up')
