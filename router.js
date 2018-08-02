@@ -13,6 +13,7 @@ module.exports = (app) => {
     .get('/sys/userlists', systemController.userlists)
     .get('/sys/usergroup', systemController.usergroup)
     .get('/sys/userrole', systemController.userrole)
+    .get('/sys/logs', systemController.logs)
 
   app.use(router.routes())
     .use(router.allowedMethods())
