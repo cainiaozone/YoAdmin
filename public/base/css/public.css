@@ -8,6 +8,10 @@ a, a:hover, a:link {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 /*水平翻转*/
 
 .flipx {
