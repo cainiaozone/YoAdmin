@@ -27,7 +27,6 @@ var utils = {
     var de = document.documentElement;
     return self.pageXOffset || (de && de.scrollLeft) || document.body.scrollLeft;
   },
-
   // 显示遮罩层
   showOverlay: function() {
     // $("#overlay").remove();
@@ -57,6 +56,31 @@ var utils = {
       $(data).fadeOut(3000)
     }
   },
+  // 获取url中"?"符后的 传递的参数
+  getRequest: function() {
+    var url = location.search;
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for (var i = 0; i < strs.length; i++) {
+        theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+      }
+    }
+    return theRequest;
+  },
+  // 获取字符串长度
+  getLength: function(str) {
+    var len = 0;
+    for (var i = 0; i < str.length; i++) {
+      if (str.charCodeAt(i) > 127 || str.charCodeAt(i) == 94) {
+        len += 2;
+      } else {
+        len++;
+      }
+    }
+    return len;
+  },
   //动态加载CSS
   dynamicLoadingCSS: function(path) {
     if (!path || path.length === 0) {
@@ -79,7 +103,40 @@ var utils = {
     script.type = 'text/javascript';
     script.src = path;
     body.appendChild(script);
-  }
+  },
+  myBrowser: function() {
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    console.log(userAgent);
+    //判断是否Opera浏览器
+    if (userAgent.indexOf("Opera") > -1) {
+      return "Opera"
+    };
+    //判断是否Firefox浏览器
+    if (userAgent.indexOf("Firefox") > -1) {
+      return "FF";
+    }
+    if (userAgent.indexOf("Chrome") > -1) {
+      return "Chrome";
+    }
+    //判断是否Safari浏览器
+    if (userAgent.indexOf("Safari") > -1) {
+      return "Safari";
+    }
+    //判断是否IE浏览器
+    if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+      return "IE";
+    };
+  },
+  // 邮箱格式校验
+  isEmail: function(str) {
+    var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+    return reg.test(str);
+  },
+  // 手机号校验
+  isPhone: function(str) {
+    var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+    return reg.test(str)
+  },
 }
 //判断访问终端
 var browser = {

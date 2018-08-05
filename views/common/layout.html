@@ -3,20 +3,21 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/ace/ace.min.css">
     <link rel="stylesheet" href="/base/css/public.css">
     <!--[if lt IE 9]> <script src="/assets/html5.js"></script> <script src="/assets/css3-mediaqueries.js"></script> <![endif]-->
     {% block head %}{% endblock %}
   </head>
 
   <body>
-    <div class="wrapper {{pagename}}" page="{{pagename}}">
+    <div class="wrapper {{pageclass}}" page="{{pagename}}">
       {% include "./header.html" %}
-      <main>
+      <main class="">
         <div class="sidebar">
           {% block sidebar %}{% endblock %}
         </div>

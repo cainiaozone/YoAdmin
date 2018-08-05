@@ -1,0 +1,140 @@
+{% extends "../../common/layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="/home/css/home.css">
+  <link rel="stylesheet" href="/home/css/home_response.css">
+{% endblock %}
+{% block sidebar %}
+  <!-- 系统菜单开始 -->
+  {% include "../sysmenu.html" %}
+  <!-- 系统菜单结束 -->
+{% endblock %}
+{% block main %}
+  <div class="breadcrumbs ace-save-state breadcrumbs-fixed">
+    <ul class="breadcrumb">
+      <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="/">首页</a>
+      </li>
+      <li>
+        <a href="/sys/userlists">用户</a>
+      </li>
+      <li class="active">用户信息</li>
+    </ul>
+  </div>
+  <div class="page-header edit-user">
+    <h1>用户信息</h1>
+    <ul class="operate">
+      <li>
+        <i class="fa fa-save" aria-hidden="true"></i>
+        <span>保存</span>
+      </li>
+      <li class="btn-concel">
+        <i class="fa fa-close" aria-hidden="true"></i>
+        <span>取消</span>
+      </li>
+    </ul>
+  </div>
+  <div class="page-content row">
+    <form id="userForm" class="form-horizontal">
+      <div class="col-md-7 col-xs-12">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">姓</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="firstname" id="firstName" placeholder="姓" value="Wang">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="lastName" class="col-sm-3 control-label">名</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="lastname" id="lastName" placeholder="名" value="Bruce">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">岗位</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="position" id="firstName" placeholder="岗位" value="工程师">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="lastName" class="col-sm-3 control-label">描述</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="description" id="lastName" placeholder="描述" value="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">电话</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="phone" id="firstName" placeholder="电话" value="13920830281">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="lastName" class="col-sm-3 control-label">Email</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" name="email" id="lastName" placeholder="Email" value="test@163.com">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7 colo-xs-12">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>启用</th>
+                <th>角色</th>
+                <th>描述</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" checked="checked" name="" value="1">
+                </td>
+                <td>Admin</td>
+                <td>执行系统管理任务</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="" value="2">
+                </td>
+                <td>财务人员</td>
+                <td>查看报表</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+{% block js %}
+  <script type="text/javascript" src="/home/js/home.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var req = utils.getRequest();
+      console.log(req.type);
+      if (req.type == 'new') {
+        console.log("新的");
+        // 新增用户
+        $("#userForm :input").not(":button, :submit, :reset, :hidden, :checkbox, :radio").val("");
+        $("#userForm :input").removeAttr("checked").remove("selected");
+      }
+      $('.btn-concel').click(function () {
+        // 取消
+        location.href = "/sys/userlists"
+      })
+    })
+  </script>
+{% endblock %}

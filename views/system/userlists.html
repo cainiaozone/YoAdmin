@@ -9,14 +9,25 @@
   <!-- 系统菜单结束 -->
 {% endblock %}
 {% block main %}
+  <div class="breadcrumbs ace-save-state breadcrumbs-fixed">
+    <ul class="breadcrumb">
+      <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="/">首页</a>
+      </li>
+      <li class="active">用户</li>
+    </ul>
+  </div>
   <div class="page-header">
     <h1>用户</h1>
-    <div class="operate">
-      <p>
-        <i class="fa fa-plus" aria-hidden="true"></i>
-        <span>新增用户</span>
-      </p>
-    </div>
+    <ul class="operate">
+      <li>
+        <a href="/sys/userdesc?type=new">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+          <span>新增用户</span>
+        </a>
+      </li>
+    </ul>
   </div>
   <div class="page-content row">
     <div class="col-xs-12">
@@ -24,431 +35,41 @@
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <th>操作</th>
+              <th>序号</th>
               <th>用户名</th>
               <th>全名</th>
               <th>电话</th>
               <th>状态</th>
+              <th>操作</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td>1</td>
               <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
+                <a href="/sys/userdesc">test@163.com</a>
               </td>
               <td>Bruce Wang</td>
               <td>13823924829</td>
               <td>正常</td>
+              <td class="action-buttons">
+                <i class="ace-icon fa fa-pencil bigger-130 green"></i>
+                <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
+              </td>
             </tr>
             <tr>
+              <td>2</td>
               <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
+                <a href="/sys/userdesc">test@163.com</a>
               </td>
               <td>Bruce Wang</td>
               <td>13823924829</td>
               <td>正常</td>
+              <td class="action-buttons">
+                <i class="ace-icon fa fa-pencil bigger-130 green"></i>
+                <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
+              </td>
             </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-            <tr>
-              <td>
-                <button class="btn btn-xs btn-info">
-                  <i class="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-xs btn-danger">
-                  <i class=" fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-              </td>
-              <td>
-                <a href="#">test@163.com</a>
-              </td>
-              <td>Bruce Wang</td>
-              <td>13823924829</td>
-              <td>正常</td>
-            </tr>
-
           </tbody>
         </table>
       </div>

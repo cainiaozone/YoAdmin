@@ -19,7 +19,7 @@ module.exports = (app) => {
   }))
   // 配置静态资源加载中间件
   app.use(koaStatic(
-    path.join(__dirname, '../public') 
+    path.join(__dirname, '../public')
   ))
 
   // 配置服务器端模板渲染引擎中间件

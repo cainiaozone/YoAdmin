@@ -8,6 +8,10 @@ a, a:hover, a:link {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .hidden {
   display: none;
 }
@@ -32,14 +36,6 @@ a, a:hover, a:link {
   transform: scaleY(-1);
   /*IE*/
   filter: FlipV;
-}
-
-.wrapper {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
 }
 
 header .navbar {
@@ -93,7 +89,7 @@ header .service-lists ul li a:hover {
   color: #fff;
 }
 
-header .navbar-brand {
+header .navbar .navbar-brand {
   position: relative;
   padding: 0 10px;
   height: 50px;
@@ -108,6 +104,8 @@ header .logo {
 
 header .navbar-inverse .navbar-nav>li>a {
   color: #fff;
+  padding-top: 16px;
+  height: 50px;
 }
 
 header .navbar-nav li:hover, header .navbar-section:hover {
@@ -154,10 +152,6 @@ header .navbar-section.active {
   background-color: #75B3D7;
 }
 
-.navbar-toggle {
-  margin-right: 30px;
-}
-
 /* header end */
 
 /* main start */
@@ -179,9 +173,7 @@ main .menu-icon {
 }
 
 main .nav-sidebar {
-  margin-right: -21px;
-  margin-bottom: 20px;
-  margin-left: -20px;
+  margin: 0 0 20px;
 }
 
 main .nav-sidebar li {
@@ -189,8 +181,6 @@ main .nav-sidebar li {
 }
 
 main .nav-sidebar li a {
-  padding-right: 20px;
-  padding-left: 20px;
   color: #585858;
   background-color: #F8F8F8;
 }
@@ -200,16 +190,17 @@ main .nav-sidebar .active a, main .nav-sidebar li a:focus, main .nav-sidebar li 
   background-color: #fff;
 }
 
-main .main {
-  padding: 70px 20px 0;
+.breadcrumbs-fixed {
+  left: 191px;
+  top: 50px;
 }
 
 main .main .page-header {
   position: fixed;
-  top: 0;
-  left: 211px;
-  right: 20px;
-  padding: 20px 8px 8px;
+  top: 91px;
+  left: 191px;
+  right: 0px;
+  padding: 20px 20px 8px;
   overflow: hidden;
   z-index: 1;
   background-color: #fff;
@@ -217,33 +208,29 @@ main .main .page-header {
 
 .main .page-header h1 {
   float: left;
-  padding: 0;
-  margin: 0;
-  font-size: 24px;
-  font-weight: lighter;
-  color: #2679B5;
 }
 
 .main .page-header .operate {
   float: right;
+  margin-bottom: 0;
+  overflow: hidden;
 }
 
-.main .page-header .operate p {
-  margin: 4px 0 0;
+.main .page-header .operate li {
+  float: left;
+  margin-left: 16px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .main .page-content {
   position: absolute;
-  top: 105px;
-  left: 211px;
-  right: 20px;
+  top: 146px;
+  left: 191px;
+  right: 0px;
   bottom: 0px;
+  padding: 20px;
   overflow-y: auto;
-}
-
-.main .table thead {
-  background-color: #f2f2f2;
 }
 
 .main .table a:hover {
@@ -253,11 +240,15 @@ main .main .page-header {
 /* main end */
 
 @media (min-width: 768px) {
+  .wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
   header .navbar-nav li {
     border-left: 1px solid #eee;
-  }
-  main .main {
-    margin-left: 191px;
   }
   main .sidebar {
     position: fixed;
@@ -266,10 +257,8 @@ main .main .page-header {
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 0 20px;
     overflow-x: hidden;
     overflow-y: auto;
-    border-right: 1px solid #eee;
   }
 }
 
@@ -277,15 +266,24 @@ main .main .page-header {
   main .sidebar {
     width: 100%;
   }
-  main .nav-sidebar li a {
-    padding-left: 35px;
-  }
   main .sidebar-status {
     display: none;
   }
-  main .nav-sidebar {
-    margin-right: -20px;
+  main .main .page-header {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .main .page-content {
+    position: relative;
+    left: 0;
+    top: 0;
   }
 }
 
 /* Public CSS End */
+
+.action-buttons i {
+  margin-right: 6px;
+  cursor: pointer;
+}

@@ -1,3 +1,2 @@
-# YoAdmin
-
-企业管理平台
+# Yojs
+基于Node、Koa2和Webpack搭建的项目框架
