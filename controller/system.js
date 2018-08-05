@@ -55,12 +55,28 @@ module.exports = {
       pageclass: 'usergroup'
     })
   },
+  // 用户组详情页
+  groupdesc: async (ctx, next) => {
+    await ctx.render('system/users/groupdesc', {
+      title: '用户组详情',
+      pagename: 'userlists',
+      pageclass: 'groupdesc'
+    })
+  },
   // 用户角色
   userrole: async (ctx, next) => {
     await ctx.render('system/userrole', {
       title: '用户角色',
       pagename: 'userrole',
       pageclass: 'userrole'
+    })
+  },
+  // 用户角色详情页
+  roledesc: async (ctx, next) => {
+    await ctx.render('system/users/roledesc', {
+      title: '用户角色详情',
+      pagename: 'userrole',
+      pageclass: 'roledesc'
     })
   },
   // 日志

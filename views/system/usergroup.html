@@ -20,17 +20,76 @@
   </div>
   <div class="page-header">
     <h1>用户组</h1>
-    <div class="operate hidden">
-      <p>
-        <i class="fa fa-plus" aria-hidden="true"></i>
-        <span>新增用户</span>
-      </p>
-    </div>
+    <ul class="operate">
+      <li>
+        <a href="/sys/groupdesc?type=new">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+          <span>新增用户组</span>
+        </a>
+      </li>
+    </ul>
   </div>
   <div class="page-content row">
-    <div class="col-xs-12"></div>
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>用户组名</th>
+              <th>描述</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                <a href="/sys/groupdesc">普通用户组</a>
+              </td>
+              <td>权限一般</td>
+              <td class="action-buttons">
+                <i class="ace-icon fa fa-pencil bigger-130 green"></i>
+                <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
+  <!-- 删除确认弹出开始 -->
+  <div class="alert alert-info alert-dismissible " role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <i class="fa fa-close" aria-hidden="true"></i>
+    </button>
+    <h5>你确定要删除该条记录吗？</h5>
+    <button type="button" class="btn btn-danger">取消</button>
+    <button type="button" class="btn btn-primary pull-right">确认</button>
+  </div>
+  <!-- 删除确认弹出结束 -->
 {% endblock %}
 {% block js %}
-  <script type="text/javascript" src="/home/js/home.js"></script>
+  <script type="text/javascript">
+    // 编辑
+    $('.action-buttons .fa-pencil').click(function () {
+      location.href = '/sys/groupdesc'
+    })
+    // 删除
+    $('.action-buttons .fa-trash-o').click(function () {
+      utils.showOverlay();
+      $('.alert').show()
+    })
+    // 弹窗 取消/关闭
+    $('.alert .close,.alert .btn-danger').click(function () {
+      utils.hideOverlay();
+      $('.alert').hide();
+    })
+    // 弹窗 确认
+    $('.alert .btn-primary').click(function () {
+      utils.hideOverlay();
+      $('.alert').hide();
+      // 删除接口调用
+    })
+  </script>
 {% endblock %}

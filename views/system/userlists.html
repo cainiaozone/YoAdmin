@@ -40,6 +40,8 @@
               <th>全名</th>
               <th>电话</th>
               <th>状态</th>
+              <th>角色</th>
+              <th>所在组</th>
               <th>操作</th>
             </tr>
           </thead>
@@ -52,6 +54,8 @@
               <td>Bruce Wang</td>
               <td>13823924829</td>
               <td>正常</td>
+              <td>Admin</td>
+              <td>系统管理</td>
               <td class="action-buttons">
                 <i class="ace-icon fa fa-pencil bigger-130 green"></i>
                 <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
@@ -65,6 +69,8 @@
               <td>Bruce Wang</td>
               <td>13823924829</td>
               <td>正常</td>
+              <td>Admin</td>
+              <td>系统管理</td>
               <td class="action-buttons">
                 <i class="ace-icon fa fa-pencil bigger-130 green"></i>
                 <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
@@ -75,8 +81,40 @@
       </div>
     </div>
   </div>
-
+  <!-- 删除确认弹出开始 -->
+  <div class="alert alert-info alert-dismissible " role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <i class="fa fa-close" aria-hidden="true"></i>
+    </button>
+    <h5>你确定要删除该条记录吗？</h5>
+    <button type="button" class="btn btn-danger">取消</button>
+    <button type="button" class="btn btn-primary pull-right">确认</button>
+  </div>
+  <!-- 删除确认弹出结束 -->
 {% endblock %}
 {% block js %}
-  <script type="text/javascript" src="/home/js/home.js"></script>
+  <script>
+    $(function () {
+      // 编辑
+      $('.action-buttons .fa-pencil').click(function () {
+        location.href = '/sys/userdesc'
+      })
+      // 删除
+      $('.action-buttons .fa-trash-o').click(function () {
+        utils.showOverlay();
+        $('.alert').show()
+      })
+      // 弹窗 取消/关闭
+      $('.alert .close,.alert .btn-danger').click(function () {
+        utils.hideOverlay();
+        $('.alert').hide();
+      })
+      // 弹窗 确认
+      $('.alert .btn-primary').click(function () {
+        utils.hideOverlay();
+        $('.alert').hide();
+        // 删除接口调用
+      })
+    })
+  </script>
 {% endblock %}
