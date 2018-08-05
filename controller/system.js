@@ -59,7 +59,7 @@ module.exports = {
   groupdesc: async (ctx, next) => {
     await ctx.render('system/users/groupdesc', {
       title: '用户组详情',
-      pagename: 'userlists',
+      pagename: 'usergroup',
       pageclass: 'groupdesc'
     })
   },
