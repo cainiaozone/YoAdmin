@@ -1,7 +1,6 @@
 {% extends "../common/layout.html" %}
 {% block head %}
-  <link rel="stylesheet" href="/home/css/home.css">
-  <link rel="stylesheet" href="/home/css/home_response.css">
+  <link rel="stylesheet" href="/assets/css/daterangepicker.min.css">
 {% endblock %}
 {% block sidebar %}
   <!-- 系统菜单开始 -->
@@ -28,9 +27,124 @@
     </div>
   </div>
   <div class="page-content row">
-    <div class="col-xs-12"></div>
+    <div class="col-xs-12">
+      <div class="tabbable">
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="active">
+            <a data-toggle="tab" href="#home" aria-expanded="false">
+              <i class="green ace-icon fa fa-plus"></i>
+              资产日志
+            </a>
+          </li>
+          <li class="">
+            <a data-toggle="tab" href="#messages" aria-expanded="true">
+              <i class="green ace-icon fa fa-plus"></i>
+              运行日志
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div id="home" class="tab-pane fade active in">
+            {% include "./logs/assets-logs.html" %}
+          </div>
+          <div id="messages" class="tab-pane fade">
+            {% include "./logs/runtime-logs.html" %}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}
 {% block js %}
-  <script type="text/javascript" src="/home/js/home.js"></script>
+  <script type="text/javascript" src="/assets/js/moment.min.js"></script>
+  <script type="text/javascript" src="/assets/js/daterangepicker.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.dataTables.bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/js/dataTables.select.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      // 时间段选择
+      $('input[name=date-range-picker]').daterangepicker({
+        'applyClass': 'btn-sm btn-success',
+        'cancelClass': 'btn-sm btn-default',
+        locale: {
+          format: 'YYYY-MM-DD HH:mm',
+          applyLabel: '确认',
+          cancelLabel: '取消'
+        }
+      }).prev().on(ace.click_event, function () {
+        $(this).next().focus();
+      });
+
+      //initiate dataTables plugin
+      var myTable = $('#dynamic-table')
+      //.wrap("<div class='dataTables_borderWrap' />")
+        .DataTable({
+        bAutoWidth: false,
+        "aoColumns": [
+          {
+            "bSortable": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null, {
+            "bSortable": false
+          }
+        ],
+        "aaSorting": [],
+
+        //"bProcessing": true, "bServerSide": true, "sAjaxSource": "http://127.0.0.1/table.php"	, , "sScrollY": "200px", "bPaginate": false, "sScrollX": "100%", "sScrollXInner": "120%", "bScrollCollapse": true,
+        //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered" you may want to wrap the table inside a "div.dataTables_borderWrap" element "iDisplayLength": 50
+
+        select: {
+          style: 'multi'
+        }
+      });
+
+      myTable.on('select', function (e, dt, type, index) {
+        if (type === 'row') {
+          $(myTable.row(index).node()).find('input:checkbox').prop('checked', true);
+        }
+      });
+      myTable.on('deselect', function (e, dt, type, index) {
+        if (type === 'row') {
+          $(myTable.row(index).node()).find('input:checkbox').prop('checked', false);
+        }
+      });
+      //table checkboxes
+      $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
+      //select/deselect all rows according to table header checkbox
+      $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function () {
+        var th_checked = this.checked; //checkbox inside "TH" table header
+
+        $('#dynamic-table').find('tbody > tr').each(function () {
+          var row = this;
+          if (th_checked) 
+            myTable.row(row).select();
+          else 
+            myTable.row(row).deselect();
+          }
+        );
+      });
+
+      //select/deselect a row when the checkbox is checked/unchecked
+      $('#dynamic-table').on('click', 'td input[type=checkbox]', function () {
+        var row = $(this).closest('tr').get(0);
+        if (this.checked) 
+          myTable.row(row).deselect();
+        else 
+          myTable.row(row).select();
+        }
+      );
+
+      $(document).on('click', '#dynamic-table .dropdown-toggle', function (e) {
+        e.stopImmediatePropagation();
+        e.stopPropagation();
+        e.preventDefault();
+      });
+
+    })
+  </script>
 {% endblock %}

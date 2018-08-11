@@ -334,3 +334,7 @@ main .main .page-header {
 .widget-body .table tbody {
   border: none;
 }
+
+.search-form {
+  overflow: hidden;
+}

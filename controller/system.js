@@ -27,8 +27,8 @@ module.exports = {
   license: async (ctx, next) => {
     await ctx.render('system/license', {
       title: 'License',
-      pagename: 'License',
-      pageclass: 'License'
+      pagename: 'license',
+      pageclass: 'license'
     })
   },
   // 用户
