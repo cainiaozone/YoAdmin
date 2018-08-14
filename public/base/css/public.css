@@ -80,7 +80,6 @@ header .service-lists ul li {
   height: 230px;
   font-size: 20px;
   text-align: center;
-  line-height: 230px;
   list-style: none;
   background-color: #ddd;
   border-radius: 6px;
@@ -96,6 +95,12 @@ header .service-lists ul li a {
 header .service-lists ul li a:hover {
   background-color: #5BBFDD;
   color: #fff;
+}
+
+header .service-lists ul li .service-icon {
+  font-size: 42px;
+  margin-top: 75px;
+  margin-bottom: 14px;
 }
 
 header .navbar .navbar-brand {
