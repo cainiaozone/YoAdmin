@@ -4,7 +4,7 @@ module.exports = {
     await ctx.render('index', {
       title: '首页',
       pagename: 'home',
-      pageclass: 'home'
+      pageclass: 'system home'
     })
   },
   // 登录
@@ -12,7 +12,7 @@ module.exports = {
     await ctx.render('login', {
       title: '登录',
       pagename: 'login',
-      pageclass: 'login'
+      pageclass: 'system login'
     })
   },
   // 组织
@@ -20,7 +20,7 @@ module.exports = {
     await ctx.render('system/organization', {
       title: '组织',
       pagename: 'organization',
-      pageclass: 'organization'
+      pageclass: 'system organization'
     })
   },
   // License
@@ -28,7 +28,7 @@ module.exports = {
     await ctx.render('system/license', {
       title: 'License',
       pagename: 'license',
-      pageclass: 'license'
+      pageclass: 'system license'
     })
   },
   // 用户
@@ -36,7 +36,7 @@ module.exports = {
     await ctx.render('system/userlists', {
       title: '用户',
       pagename: 'userlists',
-      pageclass: 'userlists'
+      pageclass: 'system userlists'
     })
   },
   // 用户详情
@@ -44,7 +44,7 @@ module.exports = {
     await ctx.render('system/users/userdesc', {
       title: '用户详情',
       pagename: 'userlists',
-      pageclass: 'userdesc'
+      pageclass: 'system userdesc'
     })
   },
   // 用户组
@@ -52,7 +52,7 @@ module.exports = {
     await ctx.render('system/usergroup', {
       title: '用户组',
       pagename: 'usergroup',
-      pageclass: 'usergroup'
+      pageclass: 'system usergroup'
     })
   },
   // 用户组详情页
@@ -60,7 +60,7 @@ module.exports = {
     await ctx.render('system/users/groupdesc', {
       title: '用户组详情',
       pagename: 'usergroup',
-      pageclass: 'groupdesc'
+      pageclass: 'system groupdesc'
     })
   },
   // 用户角色
@@ -68,7 +68,7 @@ module.exports = {
     await ctx.render('system/userrole', {
       title: '用户角色',
       pagename: 'userrole',
-      pageclass: 'userrole'
+      pageclass: 'system userrole'
     })
   },
   // 用户角色详情页
@@ -76,7 +76,7 @@ module.exports = {
     await ctx.render('system/users/roledesc', {
       title: '用户角色详情',
       pagename: 'userrole',
-      pageclass: 'roledesc'
+      pageclass: 'system roledesc'
     })
   },
   // 日志
@@ -84,7 +84,7 @@ module.exports = {
     await ctx.render('system/logs', {
       title: '日志',
       pagename: 'logs',
-      pageclass: 'logs'
+      pageclass: 'system logs'
     })
   }
 }

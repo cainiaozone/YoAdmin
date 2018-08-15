@@ -5,7 +5,7 @@
 {% endblock %}
 {% block sidebar %}
   <!-- 系统菜单开始 -->
-  {% include "./sysmenu.html" %}
+  {% include "./modelmenu.html" %}
   <!-- 系统菜单结束 -->
 {% endblock %}
 {% block main %}
@@ -15,11 +15,15 @@
         <i class="ace-icon fa fa-home home-icon"></i>
         <a href="/">首页</a>
       </li>
-      <li class="active">组织</li>
+      <li>
+        <i class="ace-icon fa fa-cog home-icon"></i>
+        <a href="/model/types">系统集成</a>
+      </li>
+      <li class="active">已创建模板</li>
     </ul>
   </div>
   <div class="page-header">
-    <h1>组织</h1>
+    <h1>已创建模板</h1>
     <div class="operate hidden">
       <p>
         <i class="fa fa-plus" aria-hidden="true"></i>

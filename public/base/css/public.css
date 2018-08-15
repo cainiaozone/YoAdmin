@@ -57,9 +57,11 @@ header .service-lists {
   top: 50px;
   left: 0;
   right: 0;
-  bottom: 0;
-  padding: 30px 40px;
+  height: 300px;
+  padding: 20px 40px;
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px #eee;
   z-index: 1;
 }
 
@@ -68,16 +70,17 @@ header .service-lists .lists-title {
 }
 
 header .service-lists ul {
-  overflow: hidden;
+  margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 header .service-lists ul li {
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
-  width: 300px;
-  height: 230px;
+  width: 240px;
+  height: 180px;
   font-size: 20px;
   text-align: center;
   list-style: none;
@@ -99,7 +102,7 @@ header .service-lists ul li a:hover {
 
 header .service-lists ul li .service-icon {
   font-size: 42px;
-  margin-top: 75px;
+  margin-top: 50px;
   margin-bottom: 14px;
 }
 

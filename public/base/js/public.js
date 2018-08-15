@@ -11,4 +11,18 @@ $(function() {
   $('.nav-sidebar li').removeClass('active')
   $('.nav-sidebar .' + page).addClass('active')
 
+  var system = $('.wrapper').hasClass('system');
+  var dashboard = $('.wrapper').hasClass('dashboard');
+  var model = $('.wrapper').hasClass('model');
+  if (system) {
+    // 系统管理
+    $('.navbar-section .curr-service').text('系统管理')
+  } else if (dashboard) {
+    // 仪表板
+    $('.navbar-section .curr-service').text('仪表板')
+  } else if (model) {
+    // 系统集成
+    $('.navbar-section .curr-service').text('系统集成')
+  }
+
 })
