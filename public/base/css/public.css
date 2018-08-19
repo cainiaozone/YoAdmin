@@ -208,13 +208,14 @@ main .nav-sidebar .active a, main .nav-sidebar li a:focus, main .nav-sidebar li 
 }
 
 .breadcrumbs-fixed {
+  display: none;
   left: 191px;
   top: 50px;
 }
 
 main .main .page-header {
   position: fixed;
-  top: 91px;
+  top: 41px;
   left: 191px;
   right: 0px;
   padding: 20px 20px 8px;
@@ -242,7 +243,7 @@ main .main .page-header {
 
 .main .page-content {
   position: absolute;
-  top: 146px;
+  top: 96px;
   left: 191px;
   right: 0px;
   bottom: 0px;
