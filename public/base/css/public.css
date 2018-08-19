@@ -47,10 +47,6 @@ li {
   z-index: 10001
 }
 
-header .navbar {
-  background-color: #438EB9;
-}
-
 header .service-lists {
   display: none;
   position: fixed;
@@ -61,7 +57,7 @@ header .service-lists {
   padding: 20px 40px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 4px #eee;
+  box-shadow: 0 2px 4px #ddd;
   z-index: 1;
 }
 
@@ -139,10 +135,6 @@ header .navbar-brand sub {
   position: relative;
   top: 20px;
   color: #fff;
-}
-
-header .navbar-fixed-top {
-  border: 0;
 }
 
 header .navbar-section {
@@ -347,3 +339,27 @@ main .main .page-header {
 .search-form {
   overflow: hidden;
 }
+
+/* 筛选数据开始 */
+
+.results-datas {
+  display: block;
+}
+
+.results-datas th, .results-datas td {
+  width: 15%;
+}
+
+.results-datas .data-body {
+  display: block;
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.results-datas tbody tr {
+  /* display: block; */
+  width: 100%;
+}
+
+/* 筛选数据结束 */

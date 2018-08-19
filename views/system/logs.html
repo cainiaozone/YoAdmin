@@ -84,7 +84,7 @@
       var myTable = $('#dynamic-table')
       //.wrap("<div class='dataTables_borderWrap' />")
         .DataTable({
-        bAutoWidth: false,
+        // bAutoWidth: false,
         "aoColumns": [
           {
             "bSortable": false
@@ -93,13 +93,12 @@
           null,
           null,
           null,
-          null, {
-            "bSortable": false
-          }
+          null
         ],
         "aaSorting": [],
-
-        //"bProcessing": true, "bServerSide": true, "sAjaxSource": "http://127.0.0.1/table.php"	, , "sScrollY": "200px", "bPaginate": false, "sScrollX": "100%", "sScrollXInner": "120%", "bScrollCollapse": true,
+        //"bProcessing": true, "bServerSide": true, "sAjaxSource": "http://127.0.0.1/table.php"	,
+        "sScrollY": "340px",
+        // "bPaginate": false, "sScrollX": "100%", "sScrollXInner": "120%", "bScrollCollapse": true,
         //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered" you may want to wrap the table inside a "div.dataTables_borderWrap" element "iDisplayLength": 50
 
         select: {
@@ -107,19 +106,7 @@
         }
       });
 
-      myTable.on('select', function (e, dt, type, index) {
-        if (type === 'row') {
-          $(myTable.row(index).node()).find('input:checkbox').prop('checked', true);
-        }
-      });
-      myTable.on('deselect', function (e, dt, type, index) {
-        if (type === 'row') {
-          $(myTable.row(index).node()).find('input:checkbox').prop('checked', false);
-        }
-      });
-      //table checkboxes
-      $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
-      //select/deselect all rows according to table header checkbox
+      //table checkboxes select/deselect all rows according to table header checkbox
       $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function () {
         var th_checked = this.checked; //checkbox inside "TH" table header
 
