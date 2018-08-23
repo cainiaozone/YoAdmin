@@ -1,29 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="bruce">
-    <link rel="icon" href="favicon.ico">
-    <title>登录</title>
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/login/login.css">
-    <!--[if lt IE 9]> <script src="/assets/html5.js"></script> <script src="/assets/css3-mediaqueries.js"></script> <![endif]-->
-  </head>
 
-  <body>
-    <div class="container">
-      <form class="form-signin" action="/">
-        <h2 class="form-signin-heading">登录</h2>
-        <label for="inputEmail" class="sr-only">用户名</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="用户户名" required="required" autofocus="autofocus">
-        <label for="inputPassword" class="sr-only">密码</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="密码" required="required">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
-      </form>
-    </div>
-    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="bruce">
+  <link rel="icon" href="favicon.ico">
+  <title>登录</title>
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/nice-validator/jquery.validator.css">
+  <link rel="stylesheet" href="/assets/ace/ace.min.css">
+  <link rel="stylesheet" href="/login/login.css">
+  <!--[if lt IE 9]> <script src="/assets/html5.js"></script> <script src="/assets/css3-mediaqueries.js"></script> <![endif]-->
+</head>
+
+<body>
+  <div class="login-layout ">
+    <form id="loginForm" class="form-signin nice-validator" data-validator-option="{theme:'default_bottom'}">
+      <h1 class="form-title">深圳市合创数据</h1>
+      <div class="form-content">
+        <h4 class="header blue lighter ">
+            <i class="ace-icon fa fa-coffee green"></i>
+            <span class="">Please Enter Your Information</span>
+          </h4>
+        <div class="content-main">
+          <div class="form-item">
+            <label for="username" class="sr-only">用户名</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="用户名" />
+            <i class="ace-icon fa fa-user"></i>
+          </div>
+          <div class="form-item">
+            <label for="password" class="sr-only">密码</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="密码" />
+            <i class="ace-icon fa fa-lock"></i>
+          </div>
+          <button class="btn btn-sm btn-primary btn-block" type="submit">登录</button>
+        </div>
+      </div>
+      <div class="alert alert-block alert-success">
+        <button type="button" class="close" data-dismiss="alert">
+            <i class="ace-icon fa fa-times"></i>
+          </button>
+        <i class="ace-icon fa fa-check green"></i>
+        <span>登录成功</span>
+      </div>
+      <div class="alert alert-block alert-danger">
+        <button type="button" class="close" data-dismiss="alert">
+            <i class="ace-icon fa fa-times"></i>
+          </button>
+        <i class="ace-icon fa fa-exclamation-triangle"></i>
+        <span class="tips">提示</span>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/nice-validator/jquery.validator.min.js?local=zh-CN"></script>
+  <script type="text/javascript">
+    $(function() {
+      // 登录表单的验证
+      $('#loginForm').validator({
+        focusCleanup: true,
+        stopOnError: false,
+        //debug: true,
+        timely: 2,
+        fields: {
+          "username": {
+            rule: "required;",
+            ok: "",
+            msg: {
+              required: "请填写用户名",
+            }
+          },
+          "password": {
+            rule: "required;length[6~];",
+            ok: "",
+            msg: {
+              required: "请填写密码",
+              length: "密码最少为6位"
+            }
+          }
+        },
+        //验证成功
+        valid: function(form) {
+          var me = this;
+          // 防止表单重复提交
+          me.holdSubmit();
+          // 此处需要调用登录接口
+          var username = $('#username').val();
+          var password = $('#password').val();
+          // $.ajax({
+          //   url: '/',
+          //   type: 'POST',
+          //   data: {
+          //     "username": username,
+          //     "password": password
+          //   },
+          // dataType: 'json',
+          //   //成功后的数据判断
+          //   success: function(info) {
+          //     console.log('成功了');
+          //   }
+          // })
+          $('.alert-success').show();
+          setTimeout(function() {
+            window.location.href = '/'
+          }, 1000)
+        }
+
+      });
+    })
+  </script>
+</body>
+
 </html>

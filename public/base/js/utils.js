@@ -29,18 +29,12 @@ var utils = {
   },
   // 显示遮罩层
   showOverlay: function() {
-    // $("#overlay").remove();
-    // $("body").prepend('<div id="overlay"></div>');
     if (utils.pageHeight() > utils.windowHeight()) {
       $("#overlay").height(utils.pageHeight());
     } else {
       $("#overlay").height(utils.windowHeight());
     }
-    $("#overlay").width(utils.pageWidth());
-    /*
-     fadeTo第一个参数为速度，第二个为透明度;
-     多重方式控制透明度，保证兼容性，但也带来修改麻烦的问题
-    */
+    $("#overlay").width(utils.pageWidth()); 
     $("#overlay").fadeTo(200, 0.8);
   },
   // 隐藏覆盖层
