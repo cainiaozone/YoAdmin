@@ -1,0 +1,156 @@
+{
+	"1" : 
+	{
+		"create_time" : 
+		{
+			"val" : "2018-08-15 22:43:20"
+		},
+		"email" : 
+		{
+			"val" : "djlaj@sohu.com"
+		},
+		"expired" : 
+		{
+			"val" : 1
+		},
+		"fullname" : 
+		{
+			"val" : "Alex"
+		},
+		"group_matrix" : 
+		{
+			"1" : 
+			{
+				"create_time" : 
+				{
+					"val" : "2018-08-19 18:36:30"
+				},
+				"description" : null,
+				"relation" : 
+				{
+					"val" : "1"
+				},
+				"update_time" : null
+			}
+		},
+		"job_role" : null,
+		"name" : 
+		{
+			"val" : "root"
+		},
+		"phone" : 
+		{
+			"val" : "13828799008"
+		},
+		"retry" : 
+		{
+			"val" : 10
+		},
+		"role_matrix" : 
+		{
+			"1" : 
+			{
+				"create_time" : 
+				{
+					"val" : "2018-08-19 18:38:01"
+				},
+				"description" : 
+				{
+					"val" : "设计数据模板"
+				},
+				"relation" : 
+				{
+					"val" : "0"
+				},
+				"role" : 
+				{
+					"oid" : "1",
+					"otype" : "UserRole",
+					"val" : "UserRole"
+				},
+				"update_time" : null
+			}
+		},
+		"status" : 
+		{
+			"val" : "1"
+		}
+	},
+	"2" : 
+	{
+		"create_time" : 
+		{
+			"val" : "2018-08-18 23:01:14"
+		},
+		"email" : 
+		{
+			"val" : "1234@126.com"
+		},
+		"expired" : 
+		{
+			"val" : 1
+		},
+		"fullname" : 
+		{
+			"val" : "张三"
+		},
+		"group_matrix" : 
+		{
+			"2" : 
+			{
+				"create_time" : 
+				{
+					"val" : "2018-08-19 18:36:30"
+				},
+				"description" : null,
+				"relation" : 
+				{
+					"val" : "0"
+				},
+				"update_time" : null
+			}
+		},
+		"job_role" : null,
+		"name" : 
+		{
+			"val" : "admin"
+		},
+		"phone" : 
+		{
+			"val" : "13822334455"
+		},
+		"retry" : 
+		{
+			"val" : 10
+		},
+		"role_matrix" : 
+		{
+			"2" : 
+			{
+				"create_time" : 
+				{
+					"val" : "2018-08-19 18:38:01"
+				},
+				"description" : 
+				{
+					"val" : "执行管理任务"
+				},
+				"relation" : 
+				{
+					"val" : "2"
+				},
+				"role" : 
+				{
+					"oid" : "2",
+					"otype" : "UserRole",
+					"val" : "UserRole"
+				},
+				"update_time" : null
+			}
+		},
+		"status" : 
+		{
+			"val" : "1"
+		}
+	}
+}

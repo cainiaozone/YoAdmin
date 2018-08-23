@@ -1,0 +1,56 @@
+{
+  "1": {
+    "create_time": {
+      "val": "2018-08-19 00:15:26"
+    },
+    "description": {
+      "val": "设计数据模板"
+    },
+    "name": {
+      "val": "数据工程师"
+    },
+    "privilege_matrix": {
+      "1": {
+        "access_priv": {
+          "val": "1"
+        },
+        "asset_type": {
+          "val": "1"
+        },
+        "create_priv": {
+          "val": "1"
+        },
+        "create_time": {
+          "val": "2018-08-18 23:06:15"
+        },
+        "delete_priv": {
+          "val": "1"
+        },
+        "run_priv": {
+          "val": "1"
+        },
+        "set_priv": {
+          "val": "1"
+        },
+        "update_priv": {
+          "val": "1"
+        },
+        "update_time": null
+      }
+    },
+    "update_time": null
+  },
+  "2": {
+    "create_time": {
+      "val": "2018-08-19 00:15:26"
+    },
+    "description": {
+      "val": "执行管理任务"
+    },
+    "name": {
+      "val": "管理员"
+    },
+    "privilege_matrix": null,
+    "update_time": null
+  }
+}
