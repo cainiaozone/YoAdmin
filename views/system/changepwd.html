@@ -1,0 +1,62 @@
+{% extends "../common/layout.html" %} {% block head %}
+<link rel="stylesheet" href="/home/css/home.css">
+<link rel="stylesheet" href="/home/css/home_response.css"> {% endblock %} {% block sidebar %}
+<!-- 系统菜单开始 -->
+{% include "./sysmenu.html" %}
+<!-- 系统菜单结束 -->
+{% endblock %} {% block main %}
+<div class="breadcrumbs ace-save-state breadcrumbs-fixed">
+  <ul class="breadcrumb">
+    <li>
+      <i class="ace-icon fa fa-home home-icon"></i>
+      <a href="/">首页</a>
+    </li>
+    <li>
+      <i class="ace-icon fa fa-cog home-icon"></i>
+      <a href="/sys/organization">系统管理</a>
+    </li>
+    <li class="active">修改密码</li>
+  </ul>
+</div>
+<div class="page-header">
+  <h1>修改密码</h1>
+  <div class="operate hidden">
+    <p>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      <span>新增用户</span>
+    </p>
+  </div>
+</div>
+<div class="page-content row">
+  <form id="pwdForm" class="form-horizontal" role="form">
+    <div class="col-md-4 col-sm-12">
+      <div class="form-group">
+        <label for="oldpwd" class="col-md-3 control-label">旧密码</label>
+        <div class="col-md-9">
+          <input type="password" class="form-control col-xs-10 col-sm-5" name="oldpwd" id="oldpwd" placeholder="请输入旧密码" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="newpwd" class="col-md-3 control-label">新密码</label>
+        <div class="col-md-9">
+          <input type="password" class="form-control col-xs-10 col-sm-5" name="newpwd" id="newpwd" placeholder="请输入新密码" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmpwd" class="col-md-3 control-label">确认密码</label>
+        <div class="col-md-9">
+          <input type="password" class="form-control col-xs-10 col-sm-5" name="confirmpwd" id="confirmpwd" placeholder="请输入确认密码" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-offset-3 col-md-9">
+          <button class="btn btn-info" type="submit"><i class="ace-icon fa fa-check"></i>保存</button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="btn" type="reset"><i class="ace-icon fa fa-undo "></i>重置</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %} {% block js %}
+<script type="text/javascript" src="/home/js/home.js"></script>
+{% endblock %}

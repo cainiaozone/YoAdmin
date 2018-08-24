@@ -1,6 +1,5 @@
 <header>
   <!-- 顶部内容 -->
-
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -10,8 +9,9 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <img src="../logo.png" class="logo" alt="">
-        <sub>管理平台</sub>
+        <!-- <img src="../logo.png" class="logo" alt="">
+        <sub>管理平台</sub> -->
+        深圳合创数据
       </a>
       <div class="navbar-section">
         <span class="curr-service">系统管理</span>
@@ -53,21 +53,102 @@
         </li>
       </ul>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="#">
-            <span class="glyphicon glyphicon-bell"></span>
-            <span class="badge">4</span>
-          </a>
+    <div class="navbar-buttons navbar-header pull-right" role="navigation">
+      <ul class="nav ace-nav">
+        <li class="grey dropdown-modal">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<i class="ace-icon fa fa-bell icon-animated-bell"></i>
+						<span class="badge badge-important">8</span>
+					</a>
+          <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+            <li class="dropdown-header">
+              <i class="ace-icon fa fa-exclamation-triangle"></i> 8条通知
+            </li>
+            <li class="dropdown-content ace-scroll">
+              <div class="scroll-track">
+                <div class="scroll-bar"></div>
+              </div>
+              <div class="scroll-content">
+                <ul class="dropdown-menu dropdown-navbar">
+                  <li>
+                    <a href="#">
+                      <div class="clearfix">
+                        <span class="pull-left">
+    														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+    														New Comments
+    													</span>
+                        <span class="pull-right badge badge-info">+12</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+												<i class="btn btn-xs btn-primary fa fa-user"></i>
+												Bob just signed up as an editor ...
+											</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="clearfix">
+                        <span class="pull-left">
+    														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+    														New Orders
+    													</span>
+                        <span class="pull-right badge badge-success">+8</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="clearfix">
+                        <span class="pull-left">
+    														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+    														Followers
+    													</span>
+                        <span class="pull-right badge badge-info">+11</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">
+								See all notifications
+								<i class="ace-icon fa fa-arrow-right"></i>
+							</a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="#">
-            <span class="glyphicon glyphicon-user"></span></a>
+        <li class="green dropdown-modal">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<i class="ace-icon glyphicon glyphicon-question-sign"></i>
+					</a>
         </li>
-        <li>
-          <a href="#">
-            <span class="glyphicon glyphicon-question-sign"></span></a>
+        <li class="light-blue dropdown-modal">
+          <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+						<img class="nav-user-photo" src="/assets/images/avatar.png" alt="Jason's Photo">
+						<span class="user-info">
+							<small>Welcome,</small>
+							Jason
+						</span>
+						<i class="ace-icon fa fa-caret-down"></i>
+					</a>
+          <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-caret ">
+            <li>
+              <a href="/sys/changepwd">
+								<i class="ace-icon fa fa-cog"></i>
+								修改密码
+							</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="/login">
+								<i class="ace-icon fa fa-power-off"></i>
+								退出
+							</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

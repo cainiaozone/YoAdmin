@@ -86,5 +86,13 @@ module.exports = {
       pagename: 'logs',
       pageclass: 'system logs'
     })
+  },
+  // 修改密码
+  changepwd:async(ctx,next)=>{
+    await ctx.render('system/changepwd',{
+      title:'修改密码',
+      pagename:'changepwd',
+      pageClass:'system changepwd'
+    })
   }
 }

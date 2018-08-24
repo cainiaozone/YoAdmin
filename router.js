@@ -19,6 +19,7 @@ module.exports = (app) => {
     .get('/sys/userrole', systemController.userrole)
     .get('/sys/roledesc', systemController.roledesc)
     .get('/sys/logs', systemController.logs)
+    .get('/sys/changepwd',systemController.changepwd)
 
     .get('/dashboard/panel', statisticsController.panel)
 
