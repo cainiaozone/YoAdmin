@@ -1,15 +1,15 @@
 /* Public CSS Start */
 
-a,
-a:hover,
-a:link {
+a, a:hover, a:link {
   text-decoration: none;
 }
 
 li {
   list-style: none;
 }
+
 /*水平翻转*/
+
 .flipx {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -18,7 +18,9 @@ li {
   /*IE*/
   filter: FlipH;
 }
+
 /*垂直翻转*/
+
 .flipy {
   -moz-transform: scaleY(-1);
   -webkit-transform: scaleY(-1);
@@ -118,14 +120,13 @@ header .logo {
   height: 35px;
 }
 
-header .navbar-inverse .navbar-nav > li > a {
+header .navbar-inverse .navbar-nav>li>a {
   color: #fff;
   padding-top: 16px;
   height: 45px;
 }
 
-header .navbar-nav li:hover,
-header .navbar-section:hover {
+header .navbar-nav li:hover, header .navbar-section:hover {
   background: #62A8D1;
 }
 
@@ -155,20 +156,20 @@ header .navbar-section {
   border-right: 1px solid #eee;
 }
 
-header .navbar-section,
-header .navbar-section.active {
+header .navbar-section, header .navbar-section.active {
   background-color: #62A8D1;
   color: #fff;
 }
 
-.navbar-inverse .navbar-toggle:focus,
-.navbar-inverse .navbar-toggle:hover,
-header .navbar-inverse .navbar-toggle {
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover, header .navbar-inverse .navbar-toggle {
   border: none;
   background-color: #75B3D7;
 }
+
 /* header end */
+
 /* main start */
+
 main .sidebar {
   width: 190px;
   color: #585858;
@@ -198,9 +199,7 @@ main .nav-sidebar li a {
   background-color: #F8F8F8;
 }
 
-main .nav-sidebar .active a,
-main .nav-sidebar li a:focus,
-main .nav-sidebar li a:hover {
+main .nav-sidebar .active a, main .nav-sidebar li a:focus, main .nav-sidebar li a:hover {
   color: #2B7DBC;
   background-color: #fff;
 }
@@ -252,12 +251,17 @@ main .main .page-header {
 .main .table a:hover {
   text-decoration: underline;
 }
+
+table tr a:link {
+  text-decoration: underline;
+}
+
 /* main end */
+
 @media (min-width: 768px) {
   header .navbar-nav li {
     border-left: 1px solid #eee;
   }
-
   main .sidebar {
     position: fixed;
     top: 45px;
@@ -269,68 +273,60 @@ main .main .page-header {
     overflow-y: auto;
   }
 }
+
 @media (max-width:767px) {
   header .navbar .navbar-brand {
     width: 140px;
   }
-
   header .service-lists .lists-title {
     margin-top: 0;
     margin-bottom: 15px;
   }
-
   header .service-lists {
     padding: 15px;
   }
-
   header .service-lists ul li {
     width: 30%;
     margin-right: 5%;
     height: 100px;
     font-size: 16px;
   }
-
   header .service-lists ul li:nth-child(3n) {
     margin-right: 0;
   }
-
   header .service-lists ul li .service-icon {
     font-size: 24px;
     margin-top: 22px;
     margin-bottom: 10px;
   }
-
   header .navbar-section {
     float: right;
     border: none;
   }
-
   main .sidebar {
     margin-top: 91px;
     width: 100%;
   }
-
   main .sidebar-status {
     display: none;
   }
-
   main .main .page-header {
     position: relative;
     left: 0;
     top: 0;
   }
-
   .main .page-content {
     position: relative;
     left: 0;
     top: 0;
   }
-
   .breadcrumbs {
     position: static;
   }
 }
+
 /* Public CSS End */
+
 .action-buttons i {
   margin-right: 6px;
   cursor: pointer;
@@ -381,13 +377,14 @@ main .main .page-header {
 .search-form {
   overflow: hidden;
 }
+
 /* 筛选数据开始 */
+
 .results-datas {
   display: block;
 }
 
-.results-datas td,
-.results-datas th {
+.results-datas td, .results-datas th {
   width: 15%;
 }
 
@@ -402,4 +399,5 @@ main .main .page-header {
   /* display: block; */
   width: 100%;
 }
+
 /* 筛选数据结束 */

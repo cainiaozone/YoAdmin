@@ -1,6 +1,6 @@
 {% extends "../common/layout.html" %}
 {% block head %}
-  <link rel="stylesheet" href="/home/css/home.css">
+  <link rel="stylesheet" href="/integration/css/model-types.css">
   <link rel="stylesheet" href="/home/css/home_response.css">
 {% endblock %}
 {% block sidebar %}
@@ -24,17 +24,240 @@
   </div>
   <div class="page-header">
     <h1>模板分类</h1>
-    <div class="operate hidden">
-      <p>
-        <i class="fa fa-plus" aria-hidden="true"></i>
-        <span>新增用户</span>
-      </p>
-    </div>
   </div>
-  <div class="page-content row">
-    <div class="col-xs-12"></div>
+  <div class="page-content container-fluid">
+    <div class="lf-tree">
+      <div class="widget-box widget-color-blue2">
+        <div class="widget-header">
+          <h4 class="widget-title lighter smaller">
+            分类层次树
+          </h4>
+
+        </div>
+        <div class="widget-body">
+          <div class="widget-main padding-8">
+            <ul id="typeTree" class="tree tree-unselectable tree-folder-select" role="tree"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rg-content">
+      <div class="widget-box widget-color-blue2">
+        <div class="widget-header">
+          <h4 class="widget-title lighter smaller">
+            模板列表
+          </h4>
+          <p class="operate">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <span>新增</span>
+          </p>
+        </div>
+        <div class="widget-body">
+          <div class="widget-main padding-0">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>操作</th>
+                    <th>分类</th>
+                    <th>模板</th>
+                    <th>说明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="action-buttons">
+                      <i class="ace-icon fa fa-pencil bigger-130 green"></i>
+                      <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
+                    </td>
+                    <td>正常</td>
+                    <td>
+                      <a href="/sys/userdesc">cf_check_normal</a>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="action-buttons">
+                      <i class="ace-icon fa fa-pencil bigger-130 green"></i>
+                      <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
+                    </td>
+                    <td>关注</td>
+                    <td>
+                      <a href="/sys/userdesc">cf_check_metional</a>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="action-buttons">
+                      <i class="ace-icon fa fa-pencil bigger-130 green"></i>
+                      <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
+                    </td>
+                    <td>次级</td>
+                    <td>
+                      <a href="/sys/userdesc">cf_check_subprime</a>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="action-buttons">
+                      <i class="ace-icon fa fa-pencil bigger-130 green"></i>
+                      <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
+                    </td>
+                    <td>可疑</td>
+                    <td>
+                      <a href="/sys/userdesc">cf_check_doubful</a>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="action-buttons">
+                      <i class="ace-icon fa fa-pencil bigger-130 green"></i>
+                      <i class="ace-icon fa fa-trash-o bigger-130 red"></i>
+                    </td>
+                    <td>损失</td>
+                    <td>
+                      <a href="/sys/userdesc">cf_check_loss</a>
+                    </td>
+                    <td></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 {% endblock %}
 {% block js %}
-  <script type="text/javascript" src="/home/js/home.js"></script>
+  <script type="text/javascript" src="/assets/js/tree.min.js"></script>
+  <script type="text/javascript" src="/assets/js/ace-elements.min.js"></script>
+  <script type="text/javascript">
+
+    jQuery(function ($) {
+      var sampleData = initiateDemoData(); //see below
+
+      $('#typeTree').ace_tree({
+        dataSource: sampleData['dataSource2'],
+        loadingHTML: '<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>',
+        'open-icon': 'ace-icon fa fa-folder-open',
+        'close-icon': 'ace-icon fa fa-folder',
+        'itemSelect': true,
+        'folderSelect': false,
+        'multiSelect': false,
+        'selected-icon': null,
+        'unselected-icon': null,
+        'folder-open-icon': 'ace-icon tree-plus',
+        'folder-close-icon': 'ace-icon tree-minus'
+      });
+
+      function initiateDemoData() {
+        var tree_data = {
+          'pictures': {
+            text: '一级分类1',
+            type: 'folder',
+            'icon-class': 'red'
+          },
+          'documents': {
+            text: '一级分类2',
+            type: 'folder',
+            'icon-class': 'green'
+          },
+          'readme': {
+            text: '<i class="ace-icon fa fa-file-text grey"></i> 一级分类3',
+            type: 'item'
+          },
+          'manual': {
+            text: '<i class="ace-icon fa fa-file-text grey"></i> 一级分类4',
+            type: 'item'
+          }
+        }
+
+        tree_data['pictures']['additionalParameters'] = {
+          'children': {
+            'wallpapers': {
+              text: '二级分类1-1',
+              type: 'folder',
+              'icon-class': 'pink'
+            },
+            'camera': {
+              text: '二级分类1-2',
+              type: 'folder',
+              'icon-class': 'pink'
+            }
+          }
+        }
+        tree_data['pictures']['additionalParameters']['children']['wallpapers']['additionalParameters'] = {
+          'children': [
+            {
+              text: '<i class="ace-icon fa fa-file-text green"></i> 分类1-1-1',
+              type: 'item'
+            }, {
+              text: '<i class="ace-icon fa fa-file-text green"></i> 分类1-1-2',
+              type: 'item'
+            }
+          ]
+        }
+        tree_data['pictures']['additionalParameters']['children']['camera']['additionalParameters'] = {
+          'children': [
+            {
+              text: '<i class="ace-icon fa fa-file-text green"></i> 分类1-2-1',
+              type: 'item'
+            }, {
+              text: '<i class="ace-icon fa fa-file-text green"></i> 分类1-2-2',
+              type: 'item'
+            }
+          ]
+        }
+
+        tree_data['documents']['additionalParameters'] = {
+          'children': [
+            {
+              text: '<i class="ace-icon fa fa-file-text red"></i> document1.pdf',
+              type: 'item'
+            }, {
+              text: '<i class="ace-icon fa fa-file-text grey"></i> document2.doc',
+              type: 'item'
+            }, {
+              text: '<i class="ace-icon fa fa-file-text grey"></i> document3.doc',
+              type: 'item'
+            }, {
+              text: '<i class="ace-icon fa fa-file-text red"></i> document4.pdf',
+              type: 'item'
+            }, {
+              text: '<i class="ace-icon fa fa-file-text grey"></i> document5.doc',
+              type: 'item'
+            }
+          ]
+        }
+        var dataSource2 = function (options, callback) {
+          var $data = null
+          if (!("text" in options) && !("type" in options)) {
+            $data = tree_data; //the root tree
+            callback({data: $data});
+            return;
+          } else if ("type" in options && options.type == "folder") {
+            if ("additionalParameters" in options && "children" in options.additionalParameters) 
+              $data = options.additionalParameters.children || {};
+            else 
+              $data = {}
+            //no data
+          }
+
+          if ($data != null) //this setTimeout is only for mimicking some random delay
+            setTimeout(function () {
+              callback({data: $data});
+            }, parseInt(Math.random() * 500) + 200);
+
+            //we have used static data here but you can retrieve your data dynamically from a server using ajax call checkout examples/treeview.html and examples/treeview.js for more info
+          }
+        
+        return {'dataSource2': dataSource2}
+      }
+
+    });
+  </script>
+
 {% endblock %}
