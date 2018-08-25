@@ -1,6 +1,7 @@
 {% extends "../common/layout.html" %}
 {% block head %}
-  <link rel="stylesheet" href="/home/css/home.css">
+  <!-- <link rel="stylesheet" href="/ueditor/themes/default/css/ueditor.min.css"> -->
+  <link rel="stylesheet" href="/integration/css/model-edit.css">
   <link rel="stylesheet" href="/home/css/home_response.css">
 {% endblock %}
 {% block sidebar %}
@@ -24,17 +25,56 @@
   </div>
   <div class="page-header">
     <h1>新增模板</h1>
-    <div class="operate hidden">
+    <div class="operate">
       <p>
-        <i class="fa fa-plus" aria-hidden="true"></i>
-        <span>新增用户</span>
+        <i class="fa fa-close" aria-hidden="true"></i>
+        <span>关闭模板</span>
       </p>
     </div>
   </div>
-  <div class="page-content row">
-    <div class="col-xs-12"></div>
+  <div class="page-content container-fluid">
+    <div class="edit-box">
+      <div class="lf-content">
+        <div class="widget-box widget-color-blue2">
+          <div class="widget-header">
+            <h4 class="widget-title lighter smaller">
+              demo
+            </h4>
+            <ul class="operate">
+              <li>
+                <span>有效性</span>
+              </li>
+              <li>
+                <span>保存</span>
+              </li>
+              <li>
+                <span>运行</span>
+              </li>
+            </ul>
+          </div>
+          <div class="widget-body">
+            <div class="widget-main padding-8"></div>
+          </div>
+        </div>
+      </div>
+      <div class="rg-config">
+        <div class="widget-box widget-color-blue2">
+          <div class="widget-header">
+            <h4 class="widget-title lighter smaller">
+              demo
+            </h4>
+
+          </div>
+          <div class="widget-body">
+            <div class="widget-main padding-8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}
 {% block js %}
   <script type="text/javascript" src="/home/js/home.js"></script>
+  <!-- <script type="text/javascript" src="/ueditor/ueditor.all.min.js"></script> -->
+  <!-- <script type="text/javascript" src="/ueditor/ueditor.config.js"></script> -->
 {% endblock %}
