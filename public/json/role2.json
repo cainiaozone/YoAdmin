@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "list": [{
+      "create_time": "2018-08-19 00:15:26",
+      "id": "1",
+      "description": "设计数据模板",
+      "name": "数据工程师"
+    },
+    {
+      "create_time": "2018-08-19 00:15:26",
+      "id": "2",
+      "description": "执行管理任务",
+      "name": "管理员"
+    }
+  ],
+  "msg": "用户角色列表"
+}

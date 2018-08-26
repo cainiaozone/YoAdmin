@@ -1,0 +1,41 @@
+{
+  "status": "success",
+  "list": [{
+    "create_time": "2018-08-19 18:28:56",
+    "id": "1",
+    "description": "",
+    "name": "设计组",
+    "role": [{
+      "id": "1",
+      "create_time": "2018-08-19 18:37:39",
+      "description": "设计数据模板",
+      "relation": "1",
+      "role": {
+        "oid": "1",
+        "otype": "UserRole",
+        "val": "UserRole"
+      },
+      "update_time": ""
+    }],
+    "update_time": ""
+  }, {
+    "create_time": "2018-08-19 18:28:56",
+    "id": "2",
+    "description": "",
+    "name": "管理组",
+    "role": [{
+      "id": "2",
+      "create_time": "2018-08-19 18:37:39",
+      "description": "执行管理任务",
+      "relation": "0",
+      "role": {
+        "oid": "2",
+        "otype": "UserRole",
+        "val": "UserRole"
+      },
+      "update_time": ""
+    }],
+    "update_time": ""
+  }],
+  "msg": "用户组列表"
+}

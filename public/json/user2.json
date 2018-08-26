@@ -1,0 +1,67 @@
+{
+  "status": "success",
+  "list": [{
+      "create_time": "2018-08-15 22:43:20",
+      "id": "1",
+      "email": "djlaj@sohu.com",
+      "expired": "expired",
+      "fullname": "Alex",
+      "group_matrix": [{
+        "id": "1",
+        "create_time": "2018-08-19 18:36:30",
+        "description": "设计组",
+        "relation": "1",
+        "update_time": ""
+      }],
+      "job_role": "",
+      "name": "root",
+      "phone": "13828799008",
+      "retry": 10,
+      "role_matrix": [{
+        "id": "1",
+        "create_time": "2018-08-19 18:38:01",
+        "description": "设计数据模板",
+        "relation": "0",
+        "role": {
+          "oid": "1",
+          "otype": "UserRole",
+          "val": "UserRole"
+        },
+        "update_time": ""
+      }],
+      "status": "1"
+    },
+    {
+      "create_time": "2018-08-18 23:01:14",
+      "id": "2",
+      "email": "1234@126.com",
+      "expired": "1",
+      "fullname": "张三",
+      "group_matrix": [{
+        "id": "2",
+        "create_time": "2018-08-19 18:36:30",
+        "description": "管理组",
+        "relation": "0",
+        "update_time": ""
+      }],
+      "job_role": "",
+      "name": "admin",
+      "phone": "13822334455",
+      "retry": 10,
+      "role_matrix": [{
+        "id": "2",
+        "create_time": "2018-08-19 18:38:01",
+        "description": "执行管理任务",
+        "relation": "2",
+        "role": {
+          "oid": "2",
+          "otype": "UserRole",
+          "val": "UserRole"
+        },
+        "update_time": ""
+      }],
+      "status": "1"
+    }
+  ],
+  "msg": "用户列表"
+}

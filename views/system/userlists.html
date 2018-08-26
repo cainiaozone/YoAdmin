@@ -94,28 +94,5 @@
   <!-- 删除确认弹出结束 -->
 {% endblock %}
 {% block js %}
-  <script>
-    $(function () {
-      // 编辑
-      $('.action-buttons .fa-pencil').click(function () {
-        location.href = '/sys/userdesc'
-      })
-      // 删除
-      $('.action-buttons .fa-trash-o').click(function () {
-        utils.showOverlay();
-        $('.alert').show()
-      })
-      // 弹窗 取消/关闭
-      $('.alert .close,.alert .btn-danger').click(function () {
-        utils.hideOverlay();
-        $('.alert').hide();
-      })
-      // 弹窗 确认
-      $('.alert .btn-primary').click(function () {
-        utils.hideOverlay();
-        $('.alert').hide();
-        // 删除接口调用
-      })
-    })
-  </script>
+  <script type="text/javascript" src="/system/js/userlists.js"></script>
 {% endblock %}

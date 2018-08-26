@@ -1,78 +1,60 @@
 {
-	"1" : 
-	{
-		"create_time" : 
-		{
-			"val" : "2018-08-19 18:28:56"
-		},
-		"description" : null,
-		"name" : 
-		{
-			"val" : "管理组"
-		},
-		"role" : 
-		{
-			"1" : 
-			{
-				"create_time" : 
-				{
-					"val" : "2018-08-19 18:37:39"
-				},
-				"description" : 
-				{
-					"val" : "设计数据模板"
-				},
-				"relation" : 
-				{
-					"val" : "1"
-				},
-				"role" : 
-				{
-					"oid" : "1",
-					"otype" : "UserRole",
-					"val" : "UserRole"
-				},
-				"update_time" : null
-			}
-		},
-		"update_time" : null
-	},
-	"2" : 
-	{
-		"create_time" : 
-		{
-			"val" : "2018-08-19 18:28:56"
-		},
-		"description" : null,
-		"name" : 
-		{
-			"val" : "设计组"
-		},
-		"role" : 
-		{
-			"2" : 
-			{
-				"create_time" : 
-				{
-					"val" : "2018-08-19 18:37:39"
-				},
-				"description" : 
-				{
-					"val" : "执行管理任务"
-				},
-				"relation" : 
-				{
-					"val" : "0"
-				},
-				"role" : 
-				{
-					"oid" : "2",
-					"otype" : "UserRole",
-					"val" : "UserRole"
-				},
-				"update_time" : null
-			}
-		},
-		"update_time" : null
-	}
+  "1": {
+    "create_time": {
+      "val": "2018-08-19 18:28:56"
+    },
+    "description": null,
+    "name": {
+      "val": "管理组"
+    },
+    "role": {
+      "1": {
+        "create_time": {
+          "val": "2018-08-19 18:37:39"
+        },
+        "description": {
+          "val": "设计数据模板"
+        },
+        "relation": {
+          "val": "1"
+        },
+        "role": {
+          "oid": "1",
+          "otype": "UserRole",
+          "val": "UserRole"
+        },
+        "update_time": null
+      }
+    },
+    "update_time": null
+  },
+  "2": {
+    "create_time": {
+      "val": "2018-08-19 18:28:56"
+    },
+    "description": null,
+    "name": {
+      "val": "设计组"
+    },
+    "role": {
+      "2": {
+        "create_time": {
+          "val": "2018-08-19 18:37:39"
+        },
+        "description": {
+          "val": "执行管理任务"
+        },
+        "relation": {
+          "val": "0"
+        },
+        "role": {
+          "oid": "2",
+          "otype": "UserRole",
+          "val": "UserRole"
+        },
+        "update_time": null
+      }
+    },
+    "update_time": null
+  }
 }
