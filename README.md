@@ -14,7 +14,7 @@ YoAdmin 是使用 Node和koa2 搭建的管理系统的前端界面。
 ```
 
 ## 目录结构
-
+```
 YoAdmin
 |
 |—— config                                        配置文件
@@ -54,3 +54,4 @@ YoAdmin
 |     |
 |     |—— index.html                              首页
 |     |—— login.html                              登录页
+```
